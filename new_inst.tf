@@ -1,5 +1,6 @@
 provider "aws" {
-  region = "ap-southeast-2"
+  region  = "ap-southeast-2"
+  version = "~> 3.0"
 }
 
 resource "aws_instance" "myFristEc2UsingTF" {
