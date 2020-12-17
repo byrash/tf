@@ -1,4 +1,4 @@
-You can use env varaibles using below format
+You can use env variables using below format
 
 ```export TF_VAR_instance_type="t2.macro"```
 
