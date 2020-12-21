@@ -16,9 +16,12 @@ provider "aws" {
 #   count         = 10
 # }
 
+variable "user_name" {
+  type    = list(any)
+  default = ["Yellow", "Red", "Green"]
 
+}
 resource "aws_iam_user" "user" {
-  name  = "user_${count.index}"
-  count = 10
-  path  = "/system"
+  name  = "${var.user_name[count.index]}_user"
+  count = 3
 }
