@@ -20,7 +20,7 @@ variable "ami" {
 }
 
 locals {
-  time = timestamp()
+  time = formatdate("DD MMM YYYY hh:mm ZZZ", timestamp())
 }
 
 variable "region" {
