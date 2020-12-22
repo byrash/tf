@@ -1,6 +1,14 @@
+terraform {
+  required_providers {
+    aws = {
+      version = "~> 3.0"
+    }
+  }
+}
+
+
 provider "aws" {
-  region  = "ap-southeast-2"
-  version = "~> 3.0"
+  region = "ap-southeast-2"
 }
 
 resource "aws_instance" "myFristEc2UsingTF" {

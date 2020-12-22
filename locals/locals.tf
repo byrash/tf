@@ -13,7 +13,7 @@ provider "aws" {
 locals {
   common_tags = {
     env = "Prod"
-    ou  = "finance"
+    ou  = "Finance"
   }
 }
 
