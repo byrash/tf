@@ -8,9 +8,10 @@ resource "aws_security_group" "myTestSG" {
 
   dynamic "ingress" {
     for_each = var.ingress_ports
+    iterator = ingressPort
     content {
-      from_port   = ingress.value
-      to_port     = ingress.value
+      from_port   = ingressPort.value
+      to_port     = ingressPort.value
       protocol    = "tcp"
       cidr_blocks = ["0.0.0.0/0"]
     }
